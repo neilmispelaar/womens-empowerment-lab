@@ -22,7 +22,17 @@
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 		<![endif]-->
 
-		{{ block "main" . }}{{ end }}
+		{{ block "skipnav" . }}{{ partial "site/skipnav.html" . }}{{ end }}
+
+		{{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
+
+		<!-- Start Main Content Section -->
+		<main role="main" property="mainContentOfPage">
+			{{ block "main" . }}{{ end }}
+		</main>
+		<!-- End Main Content Section -->
+
+		{{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
 
         {{ block "scripts" . }}{{ partial "site/footerresources.html" . }}{{ end }}
 
