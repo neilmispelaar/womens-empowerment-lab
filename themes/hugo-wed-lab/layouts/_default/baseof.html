@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        
+        {{ block "metadata" . }}{{ partial "site/header/metadata.html" . }}{{ end }}
+    
+        {{ block "css" . }}{{ partial "site/header/css.html" . }}{{ end }}
+    
+        {{ block "nojs" . }}{{ partial "site/header/nojs.html" . }}{{ end }}
+    
+        {{ block "twitter-card" . }}{{ partial "site/header/twitter-card.html" . }}{{ end }}
+      
+        {{ block "open-graph-data" . }}{{ partial "site/header/open-graph-data.html" . }}{{ end }}
+      
+        {{ block "favicons" . }}{{ partial "site/header/favicons" . }}{{ end }}
+      
+        <title>Women's Empowerment in Development Lab</title>
+        
+    </head>
+    <body class="bg-white">
+        
+        {{ block "main" . }}{{ end }}      
+      
+        {{ block "scripts" . }}{{ partial "site/scripts.html" . }}{{ end }}
+      
+    </body>
+</html>

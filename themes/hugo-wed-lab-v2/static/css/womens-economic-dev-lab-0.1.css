@@ -7,188 +7,189 @@
 /**
  * SVG Icons - svgicons.sparkk.fr
  */
-.svg-icon {
-  width: 1em;
-  height: 1em;
-}
-
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-  fill: #000;
-}
-
-.svg-icon circle {
-  stroke: #4691f6;
-  stroke-width: 1;
-}
-
-
-
-/**
- * Body and HTML Utilities 
- */
-
-
-body { 
-
-}
-
-
-/* 
- * Theme Background Colours 
- */ 
-.bg-light-turqoise { 
-    background-color: #79CED8   !important;
-}
-.bg-dark-turqoise { 
-    background-color: #23BDC5   !important;
-}
-.bg-orange { 
-    background-color: #F15B27   !important;
-}
-.bg-red { 
-    background-color: #DC3833   !important;
-} 
-
-
-/* 
- * Theme Text Colours 
- */ 
-.text-light-turqoise { 
-    color: #79CED8   !important;
-}
-.text-dark-turqoise { 
-    color: #23BDC5   !important;
-}
-.text-orange { 
-    color: #F15B27   !important;
-}
-.text-red { 
-    color: #DC3833   !important;
-} 
-
-
-.text-gray-100 { color: #f1f3f3;}
-.text-gray-200 { color: #e4e7e8;}
-.text-gray-300 { color: #d6dbdc;}
-.text-gray-400 { color: #c8d0d0;}
-.text-gray-500 { color: #bac4c4;}
-.text-gray-600 { color: #adb8b9;}
-.text-gray-700 { color: #9facad;}
-.text-gray-800 { color: #91a0a1;}
-.text-gray-900 { color: #828484;}
-
-
-/* 
- * Font Size Utilities 
- */ 
-.font-size-r1-1 {font-size: 1.1rem;}
-.font-size-r1-2 {font-size: 1.2rem;}
-.font-size-r1-3 {font-size: 1.3rem;}
-.font-size-r1-4 {font-size: 1.4rem;}
-.font-size-r1-5 {font-size: 1.5rem;}
-.font-size-r1-6 {font-size: 1.6rem;}
-.font-size-r1-7 {font-size: 1.7rem;}
-.font-size-r1-8 {font-size: 1.8rem;}
-.font-size-r1-9 {font-size: 1.9rem;}
-.font-size-r2-0 {font-size: 2.0rem;}
-
-
-/*
- * Button Styles 
- */
-.btn-orange { 
-    background-color: #F15B27;
-    color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.btn-orange:hover { 
-    background-color: #d35022;
-    color: #ffffff;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.10);
-}
-
-.btn-red { 
-    background-color: #DC3833;
-    color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.btn-red:hover { 
-    background-color: #a52a26;
-    color: #ffffff;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.10);
-}
-
-.btn-outline-red { 
-    background-color: #ffffff;
-    border: 1px solid #DC3833;
-    color: #DC3833;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.btn-outline-red:hover { 
-    background-color: #DC3833;
-    color: #ffffff;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.10);
-}
-
-/*
-h1, .h1 { font-size: 4.0rem !important; }
-h2, .h2 { font-size: 3.0rem !important; padding: 1.8rem 0; }
-h3, .h3 { font-size: 2.5rem !important; padding: 1.5rem 0;}
-h4, .h4 { font-size: 2.0rem !important; padding: 1.5rem 0;}
-h5, .h5 { font-size: 1.5rem !important; padding: 1.5rem 0;}
-h6, .h6 { font-size: 1.0rem !important; padding: 1.5rem 0;}
-
-.h1-404 { 
-    padding-top: 2rem;
-}
-*/
-
-
-/*
- * Type display classes
- */ 
-.display-1 {
-  font-size: 2.5rem !important;
-  font-weight: 300 !important;
-}
-.display-2 {
-  font-size: 3.0rem !important;
-  font-weight: 300 !important;
-}
-.display-3 {
-  font-size: 2.5rem !important;
-  font-weight: 300 !important;
-}
-.display-4 {
-  font-size: 2.0rem !important;
-  font-weight: 300 !important;
-}
-
-
-@media (min-width: 576px) { 
-    /* This is what you see on desktop */ 
-    .display-1 {
-      font-size: 5rem !important;
-      font-weight: 300 !important;
-    }
-    .display-2 {
-      font-size: 4.0rem !important;
-      font-weight: 300 !important;
-    }
-    .display-3 {
-      font-size: 3.5rem !important;
-      font-weight: 300 !important;
-    }
-    .display-4 {
-      font-size: 3.0rem !important;
-      font-weight: 300 !important;
-    }
-
-}
-
-
+ .svg-icon {
+    width: 1em;
+    height: 1em;
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: #000;
+  }
+  
+  .svg-icon circle {
+    stroke: #4691f6;
+    stroke-width: 1;
+  }
+  
+  
+  
+  /**
+   * Body and HTML Utilities 
+   */
+  
+  
+  body { 
+  
+  }
+  
+  
+  /* 
+   * Theme Background Colours 
+   */ 
+  .bg-light-turqoise { 
+      background-color: #79CED8   !important;
+  }
+  .bg-dark-turqoise { 
+      background-color: #23BDC5   !important;
+  }
+  .bg-orange { 
+      background-color: #F15B27   !important;
+  }
+  .bg-red { 
+      background-color: #DC3833   !important;
+  } 
+  
+  
+  /* 
+   * Theme Text Colours 
+   */ 
+  .text-light-turqoise { 
+      color: #79CED8   !important;
+  }
+  .text-dark-turqoise { 
+      color: #23BDC5   !important;
+  }
+  .text-orange { 
+      color: #F15B27   !important;
+  }
+  .text-red { 
+      color: #DC3833   !important;
+  } 
+  
+  
+  .text-gray-100 { color: #f1f3f3;}
+  .text-gray-200 { color: #e4e7e8;}
+  .text-gray-300 { color: #d6dbdc;}
+  .text-gray-400 { color: #c8d0d0;}
+  .text-gray-500 { color: #bac4c4;}
+  .text-gray-600 { color: #adb8b9;}
+  .text-gray-700 { color: #9facad;}
+  .text-gray-800 { color: #91a0a1;}
+  .text-gray-900 { color: #828484;}
+  
+  
+  /* 
+   * Font Size Utilities 
+   */ 
+  .font-size-r1-1 {font-size: 1.1rem;}
+  .font-size-r1-2 {font-size: 1.2rem;}
+  .font-size-r1-3 {font-size: 1.3rem;}
+  .font-size-r1-4 {font-size: 1.4rem;}
+  .font-size-r1-5 {font-size: 1.5rem;}
+  .font-size-r1-6 {font-size: 1.6rem;}
+  .font-size-r1-7 {font-size: 1.7rem;}
+  .font-size-r1-8 {font-size: 1.8rem;}
+  .font-size-r1-9 {font-size: 1.9rem;}
+  .font-size-r2-0 {font-size: 2.0rem;}
+  
+  
+  /*
+   * Button Styles 
+   */
+  .btn-orange { 
+      background-color: #F15B27;
+      color: #ffffff;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .btn-orange:hover { 
+      background-color: #d35022;
+      color: #ffffff;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.10);
+  }
+  
+  .btn-red { 
+      background-color: #DC3833;
+      color: #ffffff;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .btn-red:hover { 
+      background-color: #a52a26;
+      color: #ffffff;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.10);
+  }
+  
+  .btn-outline-red { 
+      background-color: #ffffff;
+      border: 1px solid #DC3833;
+      color: #DC3833;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .btn-outline-red:hover { 
+      background-color: #DC3833;
+      color: #ffffff;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.10);
+  }
+  
+  /*
+  h1, .h1 { font-size: 4.0rem !important; }
+  h2, .h2 { font-size: 3.0rem !important; padding: 1.8rem 0; }
+  h3, .h3 { font-size: 2.5rem !important; padding: 1.5rem 0;}
+  h4, .h4 { font-size: 2.0rem !important; padding: 1.5rem 0;}
+  h5, .h5 { font-size: 1.5rem !important; padding: 1.5rem 0;}
+  h6, .h6 { font-size: 1.0rem !important; padding: 1.5rem 0;}
+  
+  .h1-404 { 
+      padding-top: 2rem;
+  }
+  */
+  
+  
+  /*
+   * Type display classes
+   */ 
+  .display-1 {
+    font-size: 2.5rem !important;
+    font-weight: 300 !important;
+  }
+  .display-2 {
+    font-size: 3.0rem !important;
+    font-weight: 300 !important;
+  }
+  .display-3 {
+    font-size: 2.5rem !important;
+    font-weight: 300 !important;
+  }
+  .display-4 {
+    font-size: 2.0rem !important;
+    font-weight: 300 !important;
+  }
+  
+  
+  @media (min-width: 576px) { 
+      /* This is what you see on desktop */ 
+      .display-1 {
+        font-size: 5rem !important;
+        font-weight: 300 !important;
+      }
+      .display-2 {
+        font-size: 4.0rem !important;
+        font-weight: 300 !important;
+      }
+      .display-3 {
+        font-size: 3.5rem !important;
+        font-weight: 300 !important;
+      }
+      .display-4 {
+        font-size: 3.0rem !important;
+        font-weight: 300 !important;
+      }
+  
+  }
+  
+  
+  

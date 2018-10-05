@@ -11,4 +11,4 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm", "sitemap"]
 languageCode = "en-ca"
 title = "Women's Economic Development Lab"
 
-theme = "hugo-wed-lab-v2"
+theme = "hugo-wed-lab"
