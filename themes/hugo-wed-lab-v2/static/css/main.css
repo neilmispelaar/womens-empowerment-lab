@@ -123,8 +123,18 @@ textarea {
 
 body {
 	background-color: #f1f3f3;
+	color: #515353
 }
 
+a {
+	color: #1fa5ac;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #16767b;
+	text-decoration: underline;
+}
 
 /* ==========================================================================
    Header Logo styles
@@ -163,17 +173,14 @@ body {
 	display: flex;
 }
 
-.wl-navbar ul.wl-navbar-nav li {
-
-}
-
 .wl-navbar ul.wl-navbar-nav li a {
 	color: #a1a3a3;
 	display: block;
 
 	padding: 5px 25px 5px 25px;
-	margin: 10px 0px 10px 0px;
+	margin: 15px 10px 15px 0px;
 	border-right: 1px solid #c8d0d0;
+	text-decoration: none;
 }
 
 .wl-navbar ul.wl-navbar-nav li:last-child a {
@@ -187,73 +194,83 @@ body {
 }
 
 .wl-navbar ul.wl-navbar-nav li a:hover {
-	text-decoration: none;
 	color: #828484;
 	transition: 0.2s ease-in;
-
+	text-decoration: underline;
 }
-
-.wl-navbar ul.wl-navbar-nav-2 {
-	display: flex;
-}
-
-.wl-navbar ul.wl-navbar-nav-2 li a {
-	background-color: #ffffff;
-	border-radius: 20px;
-	color: #a1a3a3;
-	display: block;
-
-	padding: 5px 25px 5px 25px;
-	margin: 10px 10px 10px 10px;
-	border: 1px solid #f8f9f9;
-}
-
 
 /* ==========================================================================
    Footer styles
    ========================================================================== */
 
-.wl-footer-1-container {
-	background-color: #e4e7e8;
-	padding:25px 0px 25px 0px;
-
+.wl-footer-row-1-container {
+	background-color: #1fa5ac;
+	color: #fff;
+	padding: 50px 0px 50px 0px;
 }
 
-.wl-footer-1-content {
-
-}
-
-.wl-footer-1-content ul {
+ul.wl-footer-nav {
 	list-style: none;
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-
 }
 
-.wl-footer-2-container {
-	border-top: 5px solid #DC3833;
-	padding-top: 50px;
+ul.wl-footer-nav li a {
+	color: #fff;
+	display: block;
+	padding: 15px 0px 15px 0px;
 }
 
+.wl-footer-row-2-container {
+	background-color: #e4e7e8;
+	padding: 50px 0px 50px 0px;
+}
 
-.wl-footer-2-content {
+.wl-footer-row-2-container .wl-footer-row-2-flex-content {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	flex-grow: 1;
-    flex-basis: 0;
-
-	padding: 35px 0px 35px 0px;
 }
 
 
-.wl-footer-2-content p { margin: 0px; padding: 0px;}
+.wl-footer-row-2-container .wl-footer-row-2-flex-content p {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
 
+.wl-footer-row-2-container .wl-footer-row-2-flex-content ul.wl-footer-logos {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 
+}
 
+.wl-footer-row-2-container .wl-footer-row-2-flex-content ul.wl-footer-logos li:last-child {
+	/*border-left: 1px solid #c8d0d0;*/
+	padding: 0px 0px 0px 40px;
+}
+
+/* ==========================================================================
+   Breadcrumb styles
+   ========================================================================== */
+
+ol.breadcrumb {
+	background-color: inherit;
+	border-radius: 0px;
+	margin: 0px 0px 0px 0px;
+
+	padding: 15px 15px 15px 0px;
+}
+
+.breadcrumb .breadcrumb-item {
+
+}
 
 /* ==========================================================================
    Utility Colour Classes
@@ -270,6 +287,7 @@ body {
 .bg-dark-turqoise { background-color: #23BDC5   !important; }
 .bg-orange { background-color: #F15B27   !important; }
 .bg-red { background-color: #DC3833   !important; }
+.bg-white { background-color: #ffffff   !important; }
 
 .text-light-turqoise { color: #79CED8   !important; }
 .text-dark-turqoise { color: #23BDC5   !important; }
