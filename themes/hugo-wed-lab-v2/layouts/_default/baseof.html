@@ -26,25 +26,26 @@
 
 		{{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
 
-		{{if not .IsHome}}
-		{{ partial "site/breadcrumbs.html" . }}
-		{{end}}
-
-		<!-- Start Main Content Section -->
 		<main role="main" property="mainContentOfPage">
+			{{if not .IsHome}}
+			<div class="container-fluid wl-heading-container">
+				<div class="container">
+				<h1 class="display-1" id="cont">{{ .Title }}</h1>
+				</div>
+			</div>
 			<div class="container-fluid bg-white">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
+			{{end}}
 							{{ block "main" . }}{{ end }}
+			{{if not .IsHome}}
 						</div>
 					</div>
 				</div>
 			</div>
+			{{end}}
 		</main>
-
-
-		<!-- End Main Content Section -->
 
 		{{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
 

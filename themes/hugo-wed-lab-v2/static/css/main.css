@@ -136,6 +136,17 @@ a:hover {
 	text-decoration: underline;
 }
 
+
+.wl-heading-container {
+	background-color: #23BDC5;
+
+	margin: 0px;
+	padding: 15px 0px 15px 0px;
+	color: #ffffff;
+}
+
+
+
 /* ==========================================================================
    Header Logo styles
    ========================================================================== */
@@ -145,6 +156,7 @@ a:hover {
 	align-items: center;
 	justify-content: space-between;
 	padding: 35px 0px 35px 0px;
+
 
 }
 
@@ -204,7 +216,7 @@ a:hover {
    ========================================================================== */
 
 .wl-footer-row-1-container {
-	background-color: #1fa5ac;
+	background-color: #23BDC5;
 	color: #fff;
 	padding: 50px 0px 50px 0px;
 }
