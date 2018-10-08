@@ -271,6 +271,28 @@ ul.wl-footer-nav li a {
 	padding: 0px 0px 0px 40px;
 }
 
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+	.wl-footer-row-2-container .wl-footer-row-2-flex-content {
+		flex-direction: column;
+	}
+
+	.wl-footer-row-2-container .wl-footer-row-2-flex-content ul.wl-footer-logos {
+		flex-direction: column;
+	}
+
+	.wl-footer-row-2-container .wl-footer-row-2-flex-content ul.wl-footer-logos li {
+		padding: 40px 0px 40px 0px;
+	}
+
+	.wl-footer-row-2-container .wl-footer-row-2-flex-content ul.wl-footer-logos li:last-child {
+		padding: 0px 0px 0px 0px;
+	}
+
+}
+
+
 /* ==========================================================================
    Breadcrumb styles
    ========================================================================== */
