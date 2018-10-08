@@ -94,26 +94,8 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   SVG custom styles
    ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * Women's Economic Development Lab: Theme
- * Version 0.1
- */
-
 
 /**
  * SVG Icons - svgicons.sparkk.fr
@@ -135,6 +117,184 @@ textarea {
   }
 
 
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+	background-color: #f1f3f3;
+}
+
+
+/* ==========================================================================
+   Header Logo styles
+   ========================================================================== */
+
+.wl-navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 35px 0px 35px 0px;
+
+}
+
+.wl-navbar ul.wl-navbar-logos,
+.wl-navbar ul.wl-navbar-nav,
+.wl-navbar ul.wl-navbar-nav-2 {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.wl-navbar ul.wl-navbar-logos {
+	flex-grow: 1;
+
+	display: flex;
+	align-items: center;
+}
+
+
+.wl-navbar ul.wl-navbar-logos li:last-child {
+	/*border-left: 1px solid #c8d0d0;*/
+	padding: 0px 0px 0px 25px;
+}
+
+.wl-navbar ul.wl-navbar-nav {
+	display: flex;
+}
+
+.wl-navbar ul.wl-navbar-nav li {
+
+}
+
+.wl-navbar ul.wl-navbar-nav li a {
+	color: #a1a3a3;
+	display: block;
+
+	padding: 5px 25px 5px 25px;
+	margin: 10px 0px 10px 0px;
+	border-right: 1px solid #c8d0d0;
+}
+
+.wl-navbar ul.wl-navbar-nav li:last-child a {
+	border-right: none;
+}
+
+
+.wl-navbar ul.wl-navbar-nav li a.active {
+	color: #828484;
+	/*border-bottom: 2px solid #828484;*/
+}
+
+.wl-navbar ul.wl-navbar-nav li a:hover {
+	text-decoration: none;
+	color: #828484;
+	transition: 0.2s ease-in;
+
+}
+
+.wl-navbar ul.wl-navbar-nav-2 {
+	display: flex;
+}
+
+.wl-navbar ul.wl-navbar-nav-2 li a {
+	background-color: #ffffff;
+	border-radius: 20px;
+	color: #a1a3a3;
+	display: block;
+
+	padding: 5px 25px 5px 25px;
+	margin: 10px 10px 10px 10px;
+	border: 1px solid #f8f9f9;
+}
+
+
+/* ==========================================================================
+   Footer styles
+   ========================================================================== */
+
+.wl-footer-1-container {
+	background-color: #e4e7e8;
+	padding:25px 0px 25px 0px;
+
+}
+
+.wl-footer-1-content {
+
+}
+
+.wl-footer-1-content ul {
+	list-style: none;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+}
+
+.wl-footer-2-container {
+	border-top: 5px solid #DC3833;
+	padding-top: 50px;
+}
+
+
+.wl-footer-2-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-grow: 1;
+    flex-basis: 0;
+
+	padding: 35px 0px 35px 0px;
+}
+
+
+.wl-footer-2-content p { margin: 0px; padding: 0px;}
+
+
+
+
+/* ==========================================================================
+   Utility Colour Classes
+   ========================================================================== */
+
+
+.bg-grey-100 { background-color: #f1f3f3; }
+.bg-grey-200 { background-color: #e4e7e8; }
+.bg-grey-300 { background-color: #d6dbdc; }
+.bg-grey-400 { background-color: #c8d0d0; }
+
+.bg-grey-900 { background-color: #828484;}
+.bg-light-turqoise { background-color: #79CED8   !important; }
+.bg-dark-turqoise { background-color: #23BDC5   !important; }
+.bg-orange { background-color: #F15B27   !important; }
+.bg-red { background-color: #DC3833   !important; }
+
+.text-light-turqoise { color: #79CED8   !important; }
+.text-dark-turqoise { color: #23BDC5   !important; }
+.text-orange { color: #F15B27   !important; }
+.text-red { color: #DC3833   !important; }
+
+.text-grey-100 { color: #f1f3f3;}
+.text-grey-200 { color: #e4e7e8;}
+.text-grey-300 { color: #d6dbdc;}
+.text-grey-400 { color: #c8d0d0;}
+.text-grey-500 { color: #bac4c4;}
+.text-grey-600 { color: #adb8b9;}
+.text-grey-700 { color: #9facad;}
+.text-grey-800 { color: #91a0a1;}
+.text-grey-900 { color: #828484;}
+
+
+
+/**
+ * Women's Economic Development Lab: Theme
+ * Version 0.1
+ */
+
+
+
 
   /**
    * Body and HTML Utilities
@@ -149,47 +309,11 @@ textarea {
   /*
    * Theme Background Colours
    */
-  .bg-light-turqoise {
-      background-color: #79CED8   !important;
-  }
-  .bg-dark-turqoise {
-      background-color: #23BDC5   !important;
-  }
-  .bg-orange {
-      background-color: #F15B27   !important;
-  }
-  .bg-red {
-      background-color: #DC3833   !important;
-  }
 
 
   /*
    * Theme Text Colours
    */
-  .text-light-turqoise {
-      color: #79CED8   !important;
-  }
-  .text-dark-turqoise {
-      color: #23BDC5   !important;
-  }
-  .text-orange {
-      color: #F15B27   !important;
-  }
-  .text-red {
-      color: #DC3833   !important;
-  }
-
-
-  .text-gray-100 { color: #f1f3f3;}
-  .text-gray-200 { color: #e4e7e8;}
-  .text-gray-300 { color: #d6dbdc;}
-  .text-gray-400 { color: #c8d0d0;}
-  .text-gray-500 { color: #bac4c4;}
-  .text-gray-600 { color: #adb8b9;}
-  .text-gray-700 { color: #9facad;}
-  .text-gray-800 { color: #91a0a1;}
-  .text-gray-900 { color: #828484;}
-
 
   /*
    * Font Size Utilities
