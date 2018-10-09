@@ -435,6 +435,47 @@ ol.breadcrumb {
 
 
 /* ==========================================================================
+   Global Governance Lab Home Page Styles
+   Borrowing from GG site - REFACTOR
+   ========================================================================== */
+
+   .gg-lab-home-project-feature {
+    position: relative;
+    width: 100%;
+}
+
+.gg-lab-home-project-feature .gg-lab-home-project-feature-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: brightness(70%);
+}
+
+.gg-lab-home-project-feature .gg-lab-home-project-feature-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-weight: 700;
+    font-size:2.1rem;
+    line-height: 1.1;
+    color: #ffffff;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+    .gg-lab-home-project-feature .gg-lab-home-project-feature-text {
+        font-size:1.1rem;
+        padding: 0px;
+    }
+
+}
+
+/* ==========================================================================
    Utility Colour Classes
    ========================================================================== */
 

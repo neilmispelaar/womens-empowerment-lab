@@ -1,10 +1,140 @@
 {{ define "main" }}
 
+	<!-- Start Hero -->
 	<div class="container-fluid">
 		<div class="container">
-			<h1 id="cont">Home page content - from template file</h1>
+			<div class="row justify-content-center align-items-center pb-5">
+				<div class="col-9 col-md-4 col-lg-5 pt-5 pt-md-0">
+					<img src='{{ "/images/brand/wed-lab-globe-large.png" | relURL }}' class="img-fluid" alt="" />
+				</div>
+				<div class="col-md-8 col-lg-7 my-md-5 mt-0">
+					<h1 class="display-2 text-dark-blue">Women's Empowerment in Development Lab at <abbr>ISID</abbr></h1>
+					<p class="text-gray-900 font-weight-light font-size-r1-5">Run by the Institute for the Study of International Development. This Research-to-Practice Lab is bridging the gap between academics, practitioners and policy makers in Canada and globally on issues related to women's empowerment in developing countries.</p>
+
+					<div class="row pt-5 pb-3">
+						<div class="col-md-4">
+							<a class="btn btn-lg btn-green btn-block" href="{{ "/projects" | relURL }}">Research Projects</a>
+						</div>
+						<div class="col-md-4">
+							<a class="my-4 my-md-0 btn btn-lg btn-green btn-block" href="{{ "/people/index.html" | relURL }}">People</a>
+						</div>
+						<div class="col-md-4">
+							<a class="btn btn-lg btn-green btn-block" href="{{ "/publications/index.html" | relURL }}">Publications</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
+		<!-- End Hero -->
+
+		<!-- Start Latest Works Section -->
+		<section id="latest-works">
+			<div class="container-fluid py-5">
+				<div class="container">
+					<h2 class="display-3 text-dark-blue text-left text-md-center pb-5">Latest Works</h2>
+
+					<div class="row">
+						<div class="col-4">
+							<div class="d-flex flex-column bg-light p-3 rounded h-100">
+								<img class="img-fluid" src="{{ "/images/latest-works/1.png" | relURL }}" alt="" />
+								<p>Policy Brief</p>
+								<h3 class="text-dark-gray h5">Can Subsidized Early Child Care Promote Women’s Employment? Evidence from Kenya</h3>
+								<p>Shelley Clark, Caroline Kabiru, Sonia Laszlo and Stella Muthuri</p>
+								<p>GrOW Research Series</p>
+								<p class="mt-auto"><a class="btn btn-lg btn-green" href="http://grow.research.mcgill.ca/publications/policy-briefs/gpb-2017-01.pdf">Learn more <span class="sr-only">about Can Subsidized Early Child Care Promote Women’s Employment? Evidence from Kenya</span></a></p>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="d-flex flex-column bg-light p-4 rounded h-100">
+								<img class="img-fluid" src="{{ "/images/latest-works/2.jpg" | relURL }}" alt="" />
+								<p>Journal</p>
+								<h3 class="text-dark-gray h5">Natural Resource Collection and Desired Family Size: A Longitudinal Test of Environment-Population Theories</h3>
+								<p>Sarah Brauner-Otto and William G. Axinn</p>
+								<p>Population and Environment</p>
+								<p class="mt-auto"><a class="btn btn-lg btn-green" href="https://link.springer.com/article/10.1007/s11111-016-0267-6">Learn more <span class="sr-only">about Natural Resource Collection and Desired Family Size: A Longitudinal Test of Environment-Population Theories</span></a></p>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="d-flex flex-column bg-light p-4 rounded h-100">
+								<img class="img-fluid" src="{{ "/images/latest-works/3.png" | relURL }}" alt="" />
+								<p>Media Coverage</p>
+								<h3 class="text-dark-gray h5">Bridging the Gap for Women in Science and Technology</h3>
+								<p>Eliane Ubalijoro</p>
+								<p>Next Einstein Forum</p>
+								<p class="mt-auto"><a class="btn btn-lg btn-green" href="http://gg2018.nef.org/bridging-the-gap-for-women-in-science-and-technology/">Learn more <span class="sr-only">about Bridging the Gap for Women in Science and Technology</span></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Latest Works Section -->
+
+		<!-- Start Projects Section -->
+		<section id="projects">
+			<div class="container-fluid py-5">
+				<div class="container">
+					<h2 class="display-3 text-dark-blue text-left text-md-center pb-5">Research Projects</h2>
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="gg-lab-home-project-feature my-2 my-md-3">
+								<a href="{{ "/projects/project-01" | relURL }}">
+									<img class="gg-lab-home-project-feature-img rounded" src="{{ "/images/projects/project-01.jpg" | relURL }}" />
+									<div class="gg-lab-home-project-feature-text">Cash Transfers, Fertility and Women's Empowerment</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="gg-lab-home-project-feature my-2 my-md-3">
+								<a href="{{ "/projects/project-06" | relURL }}">
+									<img class="gg-lab-home-project-feature-img rounded" src="{{ "/images/projects/project-06.jpg" | relURL }}" />
+									<div class="gg-lab-home-project-feature-text text-white">Growth and Economic Opportunities for Women (GrOW) Research Series</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="gg-lab-home-project-feature my-2 my-md-3">
+								<a href="{{ "/projects/project-05" | relURL }}">
+									<img class="gg-lab-home-project-feature-img rounded" src="{{ "/images/projects/project-05.jpg" | relURL }}" />
+									<div class="gg-lab-home-project-feature-text">Female Labor Force Participation and Child Outcomes</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="gg-lab-home-project-feature my-2 my-md-3">
+								<a href="{{ "/projects/project-07" | relURL }}">
+									<img class="gg-lab-home-project-feature-img rounded" src="{{ "/images/projects/project-07.jpg" | relURL }}" />
+									<div class="gg-lab-home-project-feature-text">Financial Literacy and Educational Incentive Program for Adolescent Girls in Ghana</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- End Projects Section -->
+
+		<!-- Start Video Section -->
+		<section id="video">
+			<div class="container-fluid py-5">
+				<div class="container">
+					<h2 class="display-3 text-dark-blue text-left text-md-center pb-5">Unpacking Women’s Empowerment: Implications for Research, Policy and Practice in International Development</h2>
+					<div class="row justify-content-center">
+						<div class="col-12 col-sm-9">
+							<div class="embed-responsive embed-responsive-16by9 mb-5">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/IKP02meAGj4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+					<p class="font-size-r1-5 text-center">What constitutes women’s empowerment and how do we evaluate policies and programmes for their impact? Watch video recordings from ISID’s 2018 annual conference <a href="https://www.youtube.com/watch?v=IKP02meAGj4&list=PLCaEJ2TUv924GMa0q4clawURxB45cgsMU&index=5&t=191s" rel="external">'Unpacking Women’s Empowerment'</a>.</p>
+				</div>
+			</div>
+		</section>
+		<!-- End Video Section -->
 
 
 {{ end }}
