@@ -153,6 +153,41 @@ h1 {
 	/* border-bottom: 1px solid #515353; */
 }
 
+
+/* ==========================================================================
+   People Card styles
+   ========================================================================== */
+
+.people-card-container {
+	display: flex;
+	flex-direction: column;
+
+justify-content: space-between;
+	margin: 0px 0px 0px 0px;
+	height: 100%;
+}
+
+.people-card-container .people-name h3 {
+	font-weight: 600;
+	font-size: 110%;
+}
+
+.people-card-container .people-img {
+	order: -1;
+}
+
+.people-card-container .people-title {
+	flex-grow: 1;
+
+	color: #828484;
+	font-size: 90%;
+}
+
+.people-card-container .people-btn {
+	align-self: start;
+	justify-content: flex-end;
+}
+
 /* ==========================================================================
    Header Logo styles
    ========================================================================== */
@@ -294,6 +329,7 @@ DEVELOP THIS CODE
 	background-color: #23BDC5;
 	color: #fff;
 	padding: 50px 0px 50px 0px;
+	margin-top: 100px;
 }
 
 .wl-footer-row-1-container a {

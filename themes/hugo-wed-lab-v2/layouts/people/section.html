@@ -1,0 +1,87 @@
+{{ define "main" }}
+
+	{{ partial "site/breadcrumbs.html" . }}
+
+	<div class="container">
+
+	<h1 class="display-1">People</h1>
+
+	{{ $faculty := (where .Pages "Params.person.category" "==" "faculty") }}
+	{{ $facultyCount := len $faculty }}
+
+	{{ if gt $facultyCount 0 }}
+
+		<h2>Faculty</h2>
+
+		<ul class="row list-unstyled">
+		{{ range where .Pages "Params.person.category" "faculty" }}
+
+			{{ template "personCard" . }}
+
+		{{ end }}
+		</ul>
+
+	{{ end }}
+
+
+	{{ $practice := (where .Pages "Params.person.category" "==" "practice") }}
+	{{ $practiceCount := len $practice }}
+
+	{{ if gt $practiceCount 0 }}
+
+		<h2>Professors of Practice</h2>
+
+		<ul class="row list-unstyled">
+		{{ range where .Pages "Params.person.category" "practice" }}
+
+			{{ template "personCard" . }}
+
+		{{ end }}
+		</ul>
+
+	{{ end }}
+
+
+	{{ $research := (where .Pages "Params.person.category" "==" "research") }}
+	{{ $researchCount := len $research }}
+
+	{{ if gt $practiceCount 0 }}
+
+		<h2>Research Associates</h2>
+
+		<ul class="row list-unstyled">
+		{{ range where .Pages "Params.person.category" "research" }}
+
+			{{ template "personCard" . }}
+
+		{{ end }}
+		</ul>
+
+	{{ end }}
+
+	</div>
+
+{{ end }}
+
+
+
+{{ define "personCard" }}
+
+<li class="col-md-6 col-lg-3 my-3">
+	<div class="people-card-container">
+		<div class="people-name">
+			<h3><span class="sr-only">Name:</span>{{ .Params.person.firstname }} {{ .Params.person.lastname }}</h3>
+		</div>
+		<div class="people-img">
+			<img src="{{ .Params.person.imgsrc }}" alt="" class="img-fluid" />
+		</div>
+		<div class="people-title">
+			{{ .Params.person.title }}
+		</div>
+		<div class="people-btn">
+			<a href="{{.Permalink}}" class="btn btn-primary">Read more</a>
+		</div>
+	</div>
+</li>
+
+{{ end }}
