@@ -1,0 +1,98 @@
+{{ define "main" }}
+
+	{{ partial "site/breadcrumbs.html" . }}
+
+	<div class="container">
+
+
+	<h1 class="display-1">Publications</h1>
+
+		{{ $journals := (where $.Site.Data.publications.entries "type" "==" "Journals") }}
+		{{ $journalsCount := len $journals }}
+
+		{{ if gt $journalsCount 0 }}
+
+		<h2>Journals</h2>
+
+		<ul class="row list-unstyled">
+		{{ range where $.Site.Data.publications.entries "type" "Journals" }}
+
+			{{ template "publicationCard" . }}
+
+		{{ end }}
+		</ul>
+
+		{{ end }}
+
+		{{ $books := (where $.Site.Data.publications.entries "type" "==" "Books and Chapters in Books") }}
+		{{ $booksCount := len $books }}
+
+		{{ if gt $booksCount 0 }}
+
+		<h2>Books and Chapters in Books</h2>
+
+		<ul class="row list-unstyled">
+		{{ range where $.Site.Data.publications.entries "type" "Books and Chapters in Books" }}
+
+			{{ template "publicationCard" . }}
+
+		{{ end }}
+		</ul>
+
+		{{ end }}
+
+
+		{{ $medaicoverage := (where $.Site.Data.publications.entries "type" "==" "Media Coverage") }}
+		{{ $medaicoverageCount := len $medaicoverage }}
+
+		{{ if gt $medaicoverageCount 0 }}
+
+		<h2>Media Coverage</h2>
+
+		<ul class="row list-unstyled">
+		{{ range where $.Site.Data.publications.entries "type" "Media Coverage" }}
+
+			{{ template "publicationCard" . }}
+
+		{{ end }}
+		</ul>
+
+		{{ end }}
+
+
+		{{ $policybriefs := (where $.Site.Data.publications.entries "type" "==" "Policy Brief") }}
+		{{ $policybriefsCount := len $policybriefs }}
+
+		{{ if gt $policybriefsCount 0 }}
+
+		<h2>Policy Briefs</h2>
+
+		<ul class="row list-unstyled">
+		{{ range where $.Site.Data.publications.entries "type" "Policy Brief" }}
+
+			{{ template "publicationCard" . }}
+
+		{{ end }}
+		</ul>
+
+		{{ end }}
+
+
+	</div>
+
+{{ end }}
+
+{{ define "publicationCard" }}
+
+	<li class="col-md-12" >
+		<div class="my-3 p-3 bg-light">
+			<h3 class="h5">{{ .title }}</h3>
+			<p class="my-0 text-grey-900"><span class="sr-only">Author: </span>{{ .authors }}</p>
+			<p class="my-0 text-grey-800"><span class="sr-only">Source: </span>{{ .source }}</p>
+			<p class="my-0 text-grey-700"><span class="sr-only">Year: </span>{{ .year }}</p>
+			<p class="my-0 text-grey-600"><span class="sr-only">Type:</span> {{ .type }}</p>
+			<p class="my-1 text-grey-500"><a href="{{ .href }}" class="btn btn-primary">Read more</a></p>
+		</div>
+	</li>
+
+{{ end }}
