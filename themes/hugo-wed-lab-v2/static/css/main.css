@@ -149,6 +149,9 @@ a:hover {
 	padding: 0px;
 }
 
+h1 {
+	/* border-bottom: 1px solid #515353; */
+}
 
 /* ==========================================================================
    Header Logo styles
@@ -159,8 +162,6 @@ a:hover {
 	align-items: center;
 	justify-content: space-between;
 	padding: 35px 0px 35px 0px;
-
-
 }
 
 .wl-navbar ul.wl-navbar-logos,
@@ -378,6 +379,10 @@ ul.wl-footer-nav li a {
    Breadcrumb styles
    ========================================================================== */
 
+.breadcrumb-border-top {
+	border-top: 2px solid #23BDC5;
+}
+
 ol.breadcrumb {
 	background-color: inherit;
 	border-radius: 0px;
@@ -386,9 +391,12 @@ ol.breadcrumb {
 	padding: 15px 15px 15px 0px;
 }
 
+/*
 .breadcrumb .breadcrumb-item {
 
 }
+*/
+
 
 /* ==========================================================================
    Utility Colour Classes

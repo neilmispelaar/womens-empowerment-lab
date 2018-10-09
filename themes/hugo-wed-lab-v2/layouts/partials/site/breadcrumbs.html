@@ -1,9 +1,13 @@
 	<!-- Start Breadcrumb Section -->
-	<nav aria-label="breadcrumb">
-		<ol class="breadcrumb">
-			{{ template "breadcrumb" dict "currentPage" .Page "id" .UniqueID }}
-		</ol>
-	</nav>
+	<div class="container-fluid bg-grey-200 breadcrumb-border-top">
+		<div class="container">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					{{ template "breadcrumb" dict "currentPage" .Page "id" .UniqueID }}
+				</ol>
+			</nav>
+		</div>
+	</div>
 	<!-- End Breadcrumb Section -->
 
 {{ define "breadcrumb" }}

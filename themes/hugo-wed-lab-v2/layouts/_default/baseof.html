@@ -27,6 +27,7 @@
 		{{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
 
 		<main role="main" property="mainContentOfPage">
+			{{/*
 			{{if not .IsHome}}
 			<div class="container-fluid wl-heading-container">
 				<div class="container">
@@ -34,6 +35,7 @@
 				</div>
 			</div>
 			{{end}}
+			*/}}
 			{{ block "main" . }}{{ end }}
 		</main>
 
