@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+	{{ partial "site/breadcrumbs.html" . }}
+
+	<div class="container">
+
+		<h1 class="display-1 mb-1">{{ .Title }}</h1>
+		<p class="lead">{{ .Page.Params.Project.Title  }}</p>
+
+		<img class="img-fluid mb-3" src="{{ .Page.Params.Project.Image }}" alt="" />
+
+		<h2>Project Description</h2>
+
+		{{ .Content }}
+
+		{{ if isset .Page.Params.Project "readmore" }}
+			<p><a rel="external" href="{{ .Page.Params.Project.ReadMore }}">Read more <span class="sr-only">about {{ .Title }}</span></a></p>
+		{{ end }}
+
+	</div>
+
+{{ end }}
