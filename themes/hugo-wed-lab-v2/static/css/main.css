@@ -214,6 +214,77 @@ a:hover {
 	text-decoration: underline;
 }
 
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+	.wl-navbar {
+		flex-grow: 1;
+		flex-wrap: wrap;
+	}
+
+	.wl-navbar ul.wl-navbar-nav {
+		flex-direction: column;
+	}
+
+	.wl-navbar ul.wl-navbar-logos  {
+
+
+		flex-grow: 1;
+
+	}
+
+	.wl-navbar ul.wl-navbar-logos li:last-child {
+		padding: 0px;
+	}
+
+}
+
+/********************************
+DEVELOP THIS CODE
+*********************************/
+
+.wl-navbar-flex-container {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.wl-navbar-flex-container .wl-navbar-flex-item {
+	flex-grow: 1;
+	flex-basis: 130px;
+	border: 1px solid green;
+}
+
+.wl-navbar-flex-container .wl-navbar-flex-item:last-child {
+	flex-grow: 25;
+	border: 1px solid blue;
+}
+
+.wl-navbar-flex-container .box {
+	flex-basis: 150px;
+	border: 1px solid green;
+}
+
+.wl-navbar-flex-container .box:last-child {
+	flex-grow:1;
+	justify-self: end;
+	border: 1px solid red;
+	text-align: right;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+	.wl-navbar-flex-container .box {
+		flex-basis: 100px;
+		flex-grow: 1;
+		border: 1px solid red;
+		background-color: #c8d0d0;
+	}
+
+}
+
 /* ==========================================================================
    Footer styles
    ========================================================================== */

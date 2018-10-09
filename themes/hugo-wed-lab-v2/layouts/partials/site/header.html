@@ -1,4 +1,29 @@
 		<!-- Start Header Section -->
+		<!-- Testing Updated Code
+		<header>
+			<div class="container-fluid bg-grey-100">
+				<div class="wl-navbar-flex-container">
+					<div class="wl-navbar-flex-item">
+						<a href="#"><img class="img-fluid" src='{{ "/images/brand/isid.png" | relURL }}' alt=""></a>
+					</div>
+					<div class="wl-navbar-flex-item">
+						<a href="#"><img class="img-fluid" src='{{ "/images/brand/wed-lab.png" | relURL }}'  alt=""></a>
+					</div>
+					<div class="wl-navbar-flex-item">
+						<ul class="wl-navbar-nav">
+							{{ $currentPage := . }}
+
+							{{ range .Site.Menus.main }}
+							<li>
+								<a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{end}}" href="{{.URL}}">{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}<span class="sr-only">Selected: </span>{{end}}{{ .Name }}</a></li>
+							{{ end }}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		-->
+
 		<header>
 			<div class="container-fluid bg-grey-100">
 				<div class="wl-navbar">
