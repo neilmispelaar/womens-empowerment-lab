@@ -7,7 +7,7 @@
 
 	<h1>Publications</h1>
 
-		<p>Selected publication produced by WED Lab members are listed on this page. Publications include journal articles, books and book chapters, media coverage, and policy briefs.</p>
+		<p class="page-lead">Selected publication produced by WED Lab members are listed on this page. Publications include journal articles, books and book chapters, media coverage, and policy briefs.</p>
 
 		{{ $journals := (where $.Site.Data.publications.entries "type" "==" "Journals") }}
 		{{ $journalsCount := len $journals }}
@@ -86,14 +86,21 @@
 
 {{ define "publicationCard" }}
 
-	<li class="col-md-12" >
-		<div class="my-3 p-3 bg-light">
-			<h3 class="h5">{{ .title }}</h3>
-			<p class="my-0 text-grey-900"><span class="sr-only">Author: </span>{{ .authors }}</p>
-			<p class="my-0 text-grey-800"><span class="sr-only">Source: </span>{{ .source }}</p>
-			<p class="my-0 text-grey-700"><span class="sr-only">Year: </span>{{ .year }}</p>
-			<p class="my-0 text-grey-600"><span class="sr-only">Type:</span> {{ .type }}</p>
-			<p class="my-1 text-grey-500"><a href="{{ .href }}" class="btn btn-primary">Read more</a></p>
+	<li class="col-12 my-3">
+		<div class="people-card-container">
+			<div class="people-name">
+				<h3 class="mt-1"><span class="sr-only">Publication Title:</span>{{ .title }}</h3>
+			</div>
+			<div class="people-author">
+				<span class="sr-only">Author: </span>{{ .authors }}
+			</div>
+			<div class="people-title">
+				<p><span class="sr-only">Source: </span>{{ .source }}, <span class="sr-only">Year: </span>{{ .year }}</p></p>
+				<p><span class="badge badge-light-turqouise">{{ .type }}</span></p>
+			</div>
+			<div class="people-btn">
+				<a href="{{.href}}" class="btn btn-red">Read more</a>
+			</div>
 		</div>
 	</li>
 
