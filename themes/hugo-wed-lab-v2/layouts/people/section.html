@@ -16,7 +16,7 @@
 		<h2>Faculty</h2>
 
 		<ul class="row list-unstyled">
-		{{ range where .Pages "Params.person.category" "faculty" }}
+		{{ range sort (where .Pages "Params.person.category" "faculty") "Params.person.lastname" }}
 
 			{{ template "personCard" . }}
 
@@ -34,7 +34,7 @@
 		<h2>Professors of Practice</h2>
 
 		<ul class="row list-unstyled">
-		{{ range where .Pages "Params.person.category" "practice" }}
+		{{ range sort (where .Pages "Params.person.category" "practice") "Params.person.lastname" }}
 
 			{{ template "personCard" . }}
 
@@ -52,7 +52,7 @@
 		<h2>Research Associates</h2>
 
 		<ul class="row list-unstyled">
-		{{ range where .Pages "Params.person.category" "research" }}
+		{{ range sort (where .Pages "Params.person.category" "research") "Params.person.lastname" }}
 
 			{{ template "personCard" . }}
 
