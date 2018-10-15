@@ -172,6 +172,10 @@ a:hover {
 	transition: 0.2s ease-in;
 }
 
+.people-card-container .people-name {
+	order: 2;
+}
+
 .people-card-container .people-name h3 {
 	font-weight: 400 !important;
 	font-size: 1.6rem !important;
@@ -183,6 +187,7 @@ a:hover {
 
 .people-card-container .people-title {
 	flex-grow: 1;
+	order: 3;
 
 	color: #828484;
 	font-size: 120%;
@@ -191,12 +196,18 @@ a:hover {
 }
 
 .people-card-container .people-btn {
+	order: 4;
 
 	align-self: start;
 	justify-content: flex-end;
 	margin-top: 20px;
 }
 
+.badge-light-turqouise {
+	color: #ffffff;
+	background-color: #23BDC5;
+	border-radius: 10px;
+}
 
 
 /* ==========================================================================

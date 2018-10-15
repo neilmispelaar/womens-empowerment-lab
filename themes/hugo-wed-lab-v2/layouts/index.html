@@ -27,41 +27,28 @@
 		</div>
 		<!-- End Hero -->
 
+
 		<!-- Start Latest Works Section -->
 		<section id="latest-works">
 			<div class="container-fluid py-5">
 				<div class="container">
 					<h2 class="display-3 text-dark-blue text-left text-md-center pb-5">Latest Works</h2>
 
-					<div class="row">
-						<div class="col-4">
-							<div class="d-flex flex-column bg-light p-3 rounded h-100">
-								<img class="img-fluid" src="{{ "/images/latest-works/1.png" | relURL }}" alt="" />
-								<p>Policy Brief</p>
-								<h3 class="text-dark-gray h5">Can Subsidized Early Child Care Promote Women’s Employment? Evidence from Kenya</h3>
-								<p>Shelley Clark, Caroline Kabiru, Sonia Laszlo and Stella Muthuri</p>
-								<p class="mt-auto"><a class="btn btn-lg btn-red" href="http://grow.research.mcgill.ca/publications/policy-briefs/gpb-2017-01.pdf">Learn more <span class="sr-only">about Can Subsidized Early Child Care Promote Women’s Employment? Evidence from Kenya</span></a></p>
-							</div>
-						</div>
-						<div class="col-4">
-							<div class="d-flex flex-column bg-light p-4 rounded h-100">
-								<img class="img-fluid" src="{{ "/images/latest-works/2.jpg" | relURL }}" alt="" />
-								<p>Journal</p>
-								<h3 class="text-dark-gray h5">Natural Resource Collection and Desired Family Size: A Longitudinal Test of Environment-Population Theories</h3>
-								<p>Sarah Brauner-Otto and William G. Axinn</p>
-								<p class="mt-auto"><a class="btn btn-lg btn-red" href="https://link.springer.com/article/10.1007/s11111-016-0267-6">Learn more <span class="sr-only">about Natural Resource Collection and Desired Family Size: A Longitudinal Test of Environment-Population Theories</span></a></p>
-							</div>
-						</div>
-						<div class="col-4">
-							<div class="d-flex flex-column bg-light p-4 rounded h-100">
-								<img class="img-fluid" src="{{ "/images/latest-works/3.png" | relURL }}" alt="" />
-								<p>Media Coverage</p>
-								<h3 class="text-dark-gray h5">Bridging the Gap for Women in Science and Technology</h3>
-								<p>Eliane Ubalijoro</p>
-								<p class="mt-auto"><a class="btn btn-lg btn-red" href="http://gg2018.nef.org/bridging-the-gap-for-women-in-science-and-technology/">Learn more <span class="sr-only">about Bridging the Gap for Women in Science and Technology</span></a></p>
-							</div>
-						</div>
-					</div>
+					{{ $latestWorksCount := len $.Site.Data.latestworks.entries }}
+
+					{{ if gt $latestWorksCount 0 }}
+
+					<ul class="row list-unstyled">
+					{{ range $.Site.Data.latestworks.entries }}
+						{{ template "latestWorksCard" . }}
+					{{ end }}
+					</ul>
+
+					{{ else }}
+						<p>Error - No Latest Works Entries Found!</p>
+					{{ end }}
+
+
 				</div>
 			</div>
 		</section>
@@ -133,5 +120,27 @@
 		</section>
 		<!-- End Video Section -->
 
+
+{{ end }}
+
+{{ define "latestWorksCard" }}
+
+	<li class="col-md-6 col-lg-4 my-3">
+		<div class="people-card-container">
+			<div class="people-name">
+				<h3 class="mt-1"><span class="sr-only">Project Name:</span>{{ .title }}</h3>
+			</div>
+			<div class="people-img">
+				<img src="{{ .image | relURL }}" alt="" class="img-fluid" />
+			</div>
+			<div class="people-title">
+				<p>{{ .authors }}</p>
+				<p><span class="badge badge-light-turqouise">{{ .type }}</span></p>
+			</div>
+			<div class="people-btn">
+				<a href="{{.href}}" class="btn btn-red">Read more</a>
+			</div>
+		</div>
+	</li>
 
 {{ end }}
