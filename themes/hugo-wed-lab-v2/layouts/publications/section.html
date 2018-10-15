@@ -17,7 +17,7 @@
 		<h2>Journals</h2>
 
 		<ul class="row list-unstyled">
-		{{ range where $.Site.Data.publications.entries "type" "Journals" }}
+		{{ range sort (where $.Site.Data.publications.entries "type" "Journals") "year" "desc" }}
 
 			{{ template "publicationCard" . }}
 
@@ -34,7 +34,7 @@
 		<h2>Books and Chapters in Books</h2>
 
 		<ul class="row list-unstyled">
-		{{ range where $.Site.Data.publications.entries "type" "Books and Chapters in Books" }}
+		{{ range sort (where $.Site.Data.publications.entries "type" "Books and Chapters in Books") "year" "desc" }}
 
 			{{ template "publicationCard" . }}
 
@@ -52,7 +52,7 @@
 		<h2>Media Coverage</h2>
 
 		<ul class="row list-unstyled">
-		{{ range where $.Site.Data.publications.entries "type" "Media Coverage" }}
+		{{ range sort (where $.Site.Data.publications.entries "type" "Media Coverage") "year" "desc" }}
 
 			{{ template "publicationCard" . }}
 
@@ -70,7 +70,7 @@
 		<h2>Policy Briefs</h2>
 
 		<ul class="row list-unstyled">
-		{{ range where $.Site.Data.publications.entries "type" "Policy Brief" }}
+		{{ range sort (where $.Site.Data.publications.entries "type" "Policy Brief") "year" "desc" }}
 
 			{{ template "publicationCard" . }}
 
