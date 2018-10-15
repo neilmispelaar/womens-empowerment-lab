@@ -1,29 +1,30 @@
 		<!-- Start Header Section -->
 		<header>
 			<div class="container-fluid bg-grey-100">
-				<div class="wl-navbar">
-					<ul class="list-unstyled">
-						<li class="list-inline-item">
+				<div class="wl-menu">
+					<ul class="wl-menu-logos">
+						<li class="">
 							<a href="#">
 								<img src='{{ "/images/brand/isid.png" | relURL }}' height="55" alt="">
 							</a></li>
-						<li class="list-inline-item">
+						<li class="">
 							<a href="#">
 								<img src='{{ "/images/brand/wed-lab.png" | relURL }}' height="55" alt="">
 							</a>
 						</li>
 					</ul>
 					<div class="wl-menu-container">
-						<ul class="wl-navbar-nav">
-							{{ $currentPage := . }}
+						<nav>
+							<ul class="wl-menu-nav">
+								{{ $currentPage := . }}
 
-							{{ range .Site.Menus.main }}
-							<li>
-								<a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{end}}" href="{{.URL}}">{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}<span class="sr-only">Selected: </span>{{end}}{{ .Name }}</a></li>
-							{{ end }}
-						</ul>
+								{{ range .Site.Menus.main }}
+								<li>
+									<a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{end}}" href="{{.URL}}">{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}<span class="sr-only">Selected: </span>{{end}}{{ .Name }}</a></li>
+								{{ end }}
+							</ul>
+						</nav>
 					</div>
 				</div>
 			</div>
 		</header>
-		<!-- End Header Section -->

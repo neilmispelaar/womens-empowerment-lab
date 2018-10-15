@@ -128,9 +128,9 @@ var myMobileMenu = (function () {
 
 		// Add the Menu Open Button
 		menuContainer.parent().append(
-			"<button class=\"btn menuOpenButton\" type=\"button\"><span class=\"sr-only\">Menu</span> " +
+			"<div class=\"menuOpenButtonContainer\"><button class=\"btn menuOpenButton\" type=\"button\"><span class=\"sr-only\">Menu</span> " +
 			"<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"svg-icon\" viewBox=\"0 0 20 20\"><path d=\"M 3.314 4.8 h 13.372 c 0.41 0 0.743 -0.333 0.743 -0.743 c 0 -0.41 -0.333 -0.743 -0.743 -0.743 H 3.314 c -0.41 0 -0.743 0.333 -0.743 0.743 C 2.571 4.467 2.904 4.8 3.314 4.8 Z M 16.686 15.2 H 3.314 c -0.41 0 -0.743 0.333 -0.743 0.743 s 0.333 0.743 0.743 0.743 h 13.372 c 0.41 0 0.743 -0.333 0.743 -0.743 S 17.096 15.2 16.686 15.2 Z M 16.686 9.257 H 3.314 c -0.41 0 -0.743 0.333 -0.743 0.743 s 0.333 0.743 0.743 0.743 h 13.372 c 0.41 0 0.743 -0.333 0.743 -0.743 S 17.096 9.257 16.686 9.257 Z\"></path></svg>" +
-			"</button>");
+			"</button></div>");
 
 		// Add the Menu Close Button
 		menuContainer.append(

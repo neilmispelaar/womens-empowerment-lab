@@ -189,43 +189,38 @@ justify-content: space-between;
 	margin-top: 20px;
 }
 
+
+
 /* ==========================================================================
-   Header Logo styles
+   Header Logo styles (v2)
    ========================================================================== */
 
-.wl-navbar {
+.wl-menu {
 	display: flex;
-	align-items: center;
+	flex-direction: row;
 	justify-content: space-between;
 	padding: 35px 0px 35px 0px;
 }
 
-.wl-navbar ul.wl-navbar-logos,
-.wl-navbar ul.wl-navbar-nav,
-.wl-navbar ul.wl-navbar-nav-2 {
+.wl-menu .wl-menu-logos {
+	display: flex;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.wl-menu .wl-menu-logos li:last-child {
+	margin-left: 20px;
+}
+
+.wl-menu ul.wl-menu-nav {
+	display: flex;
 	list-style: none;
 	padding: 0px;
 	margin: 0px;
 }
 
-.wl-navbar ul.wl-navbar-logos {
-	flex-grow: 1;
-
-	display: flex;
-	align-items: center;
-}
-
-
-.wl-navbar ul.wl-navbar-logos li:last-child {
-	/*border-left: 1px solid #c8d0d0;*/
-	padding: 0px 0px 0px 25px;
-}
-
-.wl-navbar ul.wl-navbar-nav {
-	display: flex;
-}
-
-.wl-navbar ul.wl-navbar-nav li a {
+.wl-menu ul.wl-menu-nav li a {
 	color: #a1a3a3;
 	display: block;
 
@@ -235,73 +230,58 @@ justify-content: space-between;
 	text-decoration: none;
 }
 
-.wl-navbar ul.wl-navbar-nav li:last-child a {
+.wl-menu ul.wl-menu-nav li:last-child a {
 	border-right: none;
 }
 
 
-.wl-navbar ul.wl-navbar-nav li a.active {
+.wl-menu ul.wl-menu-nav li a.active {
 	color: #828484;
 	/*border-bottom: 2px solid #828484;*/
 }
 
-.wl-navbar ul.wl-navbar-nav li a:hover {
+.wl-menu ul.wl-menu-nav li a:hover {
 	color: #828484;
 	transition: 0.2s ease-in;
 	text-decoration: underline;
 }
 
-
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
-
-	.wl-navbar ul.wl-navbar-nav {
-		flex-direction: column;
-	}
-
-	.wl-navbar ul.wl-navbar-logos  {
-		flex-grow: 1;
-	}
-
-	.wl-navbar ul.wl-navbar-logos li:last-child {
-		padding: 0px;
-	}
-
-}
-
-/* ==========================================================================
-   Mobile Menu Styles
-   ========================================================================== */
-
-.wl-menu-container {
-}
-
-/* Hide the menu buttons in all viewports except small */
-.menuOpenButton,
-.wl-menu-container .menuCloseButton
- {
+.wl-menu .menuOpenButtonContainer,
+.wl-menu .wl-menu-container .menuCloseButton {
 	display: none;
 }
 
-.menuOpenButton {
-
-	font-size: 1.5rem;
-}
-
-.menuOpenButton svg {
-	margin: 0px;
-	padding: 0px 0px 0px 0px;
-}
-
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
 
-	.menuOpenButton,
-	.wl-menu-container .menuCloseButton {
+	.wl-menu {
+		flex-direction: column;
+	}
+
+	.wl-menu .wl-menu-logos {
+		justify-content: space-around;
+	}
+
+	.wl-menu ul.wl-menu-nav {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.wl-menu ul.wl-menu-nav li a {
+		border: none;
+	}
+
+
+	.wl-menu .menuOpenButtonContainer {
+		align-self: center;
+	}
+
+	.wl-menu .menuOpenButtonContainer,
+	.wl-menu .wl-menu-container .menuCloseButton {
 		display: block;
 	}
 
-	.wl-menu-container {
+	.wl-menu .wl-menu-container {
 		position: fixed;
         top: 0;
         left: 0;
@@ -311,10 +291,10 @@ justify-content: space-between;
         visibility: hidden;
         overflow: auto;
         z-index: 1000;
-        background-color: #3A6EB6   !important;
+        background-color: #c8d0d0 !important;
 	}
 
-	.wl-menu-container.open {
+	.wl-menu .wl-menu-container.open {
         opacity: 1;
         visibility: visible;
         height: 100%;
@@ -322,9 +302,7 @@ justify-content: space-between;
         transition: opacity .35s, visibility .35s, height .35s;
 	}
 
-	.menuOpenButton {
-
-	}
+	.menuCloseButton { margin-left: auto; margin-right: auto;}
 
 }
 
