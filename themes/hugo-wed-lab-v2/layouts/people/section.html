@@ -81,7 +81,7 @@
 			{{ .Params.person.title }}
 		</div>
 		<div class="people-btn">
-			<a href="{{.Permalink}}" class="btn btn-red">Read more</a>
+			<a href="{{.Permalink}}" class="btn btn-red">Read more <span class="sr-only"> about {{ .Params.person.firstname }} {{ .Params.person.lastname }}</span></a>
 		</div>
 	</div>
 </li>
