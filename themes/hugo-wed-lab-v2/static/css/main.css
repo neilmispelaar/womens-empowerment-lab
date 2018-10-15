@@ -12,7 +12,7 @@
 
 html {
     color: #222;
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.4;
 }
 
@@ -128,7 +128,6 @@ body {
 
 a {
 	color: #1fa5ac;
-	text-decoration: underline;
 }
 
 a:hover {
@@ -139,7 +138,7 @@ a:hover {
 
 .wl-heading-container {
 	background-color: #23BDC5;
-	margin: 0px 0px 0px 0px;
+	margin: 0px 0px 35px 0px;
 	padding: 25px 0px 25px 0px;
 	color: #ffffff;
 }
@@ -148,11 +147,6 @@ a:hover {
 	margin: 0px;
 	padding: 0px;
 }
-
-h1 {
-	/* border-bottom: 1px solid #515353; */
-}
-
 
 /* ==========================================================================
    People Card styles
@@ -334,6 +328,7 @@ ul.wl-footer-nav li a {
 	color: #fff;
 	display: block;
 	padding: 15px 0px 15px 0px;
+	text-transform: uppercase;
 }
 
 .wl-footer-row-2-container {
@@ -401,10 +396,11 @@ ul.wl-footer-nav li a {
    ========================================================================== */
 
 .breadcrumb-border-top {
-	border-top: 30px solid #23BDC5;
+	/*border-top: 30px solid #23BDC5;*/
 }
 
 ol.breadcrumb {
+	color: #ffffff !important;
 	background-color: inherit;
 	border-radius: 0px;
 	margin: 0px 0px 0px 0px;
@@ -412,20 +408,107 @@ ol.breadcrumb {
 	padding: 15px 15px 15px 0px;
 }
 
-/*
-.breadcrumb .breadcrumb-item {
+.breadcrumb .breadcrumb-item::before {
+	color: #ffffff !important;
+}
+
+
+.breadcrumb .breadcrumb-item a,
+.breadcrumb .breadcrumb-item.active{
+	color: #ffffff !important;
+}
+
+
+/* ==========================================================================
+   Text, Heading and Display Styles
+   ========================================================================== */
+
+.page-lead {
+	font-size: 1.4rem !important;
+}
+
+.display-1, {
+	font-size: 2.5rem !important;
+	font-weight: 300 !important;
+}
+.display-2, h1, .h1 {
+	font-size: 3.0rem !important;
+	font-weight: 300 !important;
+}
+.display-3, h2, .h2 {
+	font-size: 2.5rem !important;
+	font-weight: 300 !important;
+}
+.display-4, h3, .h3 {
+	font-size: 2.0rem !important;
+	font-weight: 300 !important;
+}
+
+
+@media (min-width: 576px) {
+
+	/* This is what you see on desktop */
+	.display-1 {
+		font-size: 5rem !important;
+		font-weight: 300 !important;
+	}
+	.display-2, h1, .h1 {
+		font-size: 4.0rem !important;
+		font-weight: 300 !important;
+	}
+	.display-3, h2, .h2 {
+		font-size: 3.5rem !important;
+		font-weight: 300 !important;
+	}
+	.display-4, h3, .h3  {
+		font-size: 3.0rem !important;
+		font-weight: 300 !important;
+	}
 
 }
-*/
 
 
 
+/* ==========================================================================
+   Button styles
+   ========================================================================== */
 
+.btn-orange {
+	background-color: #F15B27;
+	color: #ffffff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+.btn-orange:hover {
+	background-color: #d35022;
+	color: #ffffff;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.10);
+}
 
+.btn-red {
+	background-color: #DC3833;
+	color: #ffffff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+.btn-red:hover {
+	background-color: #a52a26;
+	color: #ffffff;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.10);
+}
 
+.btn-outline-red {
+	background-color: #ffffff;
+	border: 1px solid #DC3833;
+	color: #DC3833;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+.btn-outline-red:hover {
+	background-color: #DC3833;
+	color: #ffffff;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.10);
+}
 
 
 
@@ -486,7 +569,7 @@ ol.breadcrumb {
 }
 
 /* ==========================================================================
-   Utility Colour Classes
+   Utility Classes
    ========================================================================== */
 
 
@@ -564,42 +647,7 @@ ol.breadcrumb {
   /*
    * Button Styles
    */
-  .btn-orange {
-      background-color: #F15B27;
-      color: #ffffff;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
 
-  .btn-orange:hover {
-      background-color: #d35022;
-      color: #ffffff;
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.10);
-  }
-
-  .btn-red {
-      background-color: #DC3833;
-      color: #ffffff;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-
-  .btn-red:hover {
-      background-color: #a52a26;
-      color: #ffffff;
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.10);
-  }
-
-  .btn-outline-red {
-      background-color: #ffffff;
-      border: 1px solid #DC3833;
-      color: #DC3833;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-
-  .btn-outline-red:hover {
-      background-color: #DC3833;
-      color: #ffffff;
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.10);
-  }
 
   /*
   h1, .h1 { font-size: 4.0rem !important; }
@@ -615,47 +663,6 @@ ol.breadcrumb {
   */
 
 
-  /*
-   * Type display classes
-   */
-  .display-1 {
-    font-size: 2.5rem !important;
-    font-weight: 300 !important;
-  }
-  .display-2 {
-    font-size: 3.0rem !important;
-    font-weight: 300 !important;
-  }
-  .display-3 {
-    font-size: 2.5rem !important;
-    font-weight: 300 !important;
-  }
-  .display-4 {
-    font-size: 2.0rem !important;
-    font-weight: 300 !important;
-  }
-
-
-  @media (min-width: 576px) {
-      /* This is what you see on desktop */
-      .display-1 {
-        font-size: 5rem !important;
-        font-weight: 300 !important;
-      }
-      .display-2 {
-        font-size: 4.0rem !important;
-        font-weight: 300 !important;
-      }
-      .display-3 {
-        font-size: 3.5rem !important;
-        font-weight: 300 !important;
-      }
-      .display-4 {
-        font-size: 3.0rem !important;
-        font-weight: 300 !important;
-      }
-
-  }
 
 
 
