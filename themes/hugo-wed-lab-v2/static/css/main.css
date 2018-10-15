@@ -160,7 +160,7 @@ a:hover {
 	margin: 0px 0px 0px 0px;
 	padding: 25px;
 	height: 100%;
-	background-color: #ffffff;
+	background-color: #f9f9f9;
 	border-radius: 10px;
 	box-shadow:0 20px 50px rgba(0,0,0,.1);
 
@@ -169,6 +169,7 @@ a:hover {
 
 .people-card-container:hover {
 	box-shadow:0 30px 70px rgba(0,0,0,.2);
+	background-color: #ffffff;
 	transition: 0.2s ease-in;
 }
 
@@ -478,15 +479,15 @@ ol.breadcrumb {
 		font-weight: 300 !important;
 	}
 	.display-2, h1, .h1 {
-		font-size: 4.0rem !important;
+		font-size: 3.6rem !important;
 		font-weight: 300 !important;
 	}
 	.display-3, h2, .h2 {
-		font-size: 3.5rem !important;
+		font-size: 3.0rem !important;
 		font-weight: 300 !important;
 	}
 	.display-4, h3, .h3  {
-		font-size: 3.0rem !important;
+		font-size: 2.7rem !important;
 		font-weight: 300 !important;
 	}
 
