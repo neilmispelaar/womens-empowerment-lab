@@ -134,7 +134,7 @@ var myMobileMenu = (function () {
 
 		// Add the Menu Close Button
 		menuContainer.append(
-			"<button class=\"btn menuCloseButton\" type=\"button\">Close</button>" + "</div>")
+			"<button class=\"btn btn-red menuCloseButton\" type=\"button\">Close</button>" + "</div>")
 
 		// Cache the buttons
 		menuOpenButton = wrapper.find('.menuOpenButton');
