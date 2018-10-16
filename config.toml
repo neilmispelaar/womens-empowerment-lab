@@ -2,7 +2,7 @@
 baseURL = "https://womensempowerment-lab-dev.netlify.com/"
 
 # PRODUCTION
-#baseURL = "http://womensempowerment.lab.mcgill.ca/"
+#baseURL = "https://womensempowerment.lab.mcgill.ca/"
 
 # DISABLE HUGO FROM GENERATING THE FOLLOWING
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm", "sitemap"]
