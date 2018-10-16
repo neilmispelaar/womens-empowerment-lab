@@ -9,6 +9,11 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm", "sitemap"]
 
 # LANGUAGE CODE
 languageCode = "en-ca"
-title = "Women's Economic Development Lab"
+title = "Women's Empowerment in Development Lab at ISID"
 
+# BUILD THEME
 theme = "hugo-wed-lab-v2"
+
+# USER DEFINED SITE PARAMETERS
+[params]
+  description = "Run by the Institute for the Study of International Development. This Research-to-Practice Lab is bridging the gap between academics, practitioners and policy makers in Canada and globally on issues related to women's empowerment in developing countries."
