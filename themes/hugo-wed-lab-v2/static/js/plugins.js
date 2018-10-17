@@ -23,6 +23,201 @@
 
 // Place any jQuery/helper plugins in here.
 
+
+/*!
+ * Revealing Module Pattern with User Options Boilerplate
+ * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+ */
+var myPublicationsSearch = (function () {
+
+	'use strict';
+
+	// Create global element references
+	var doc = null;
+	var pubContainer = null;
+	var pubList = null;
+	var pubItems = null;
+
+
+	// Public APIs Object
+	var publicAPIs = {};
+
+
+	// Define option defaults
+	var defaults = {
+		publicationListContainerClassName: ""
+	};
+
+	var options;
+
+
+	//
+	// Methods
+	//
+
+	/*!
+	 * Merge two or more objects together.
+	 * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+	 * @param   {Boolean}  deep     If true, do a deep (or recursive) merge [optional]
+	 * @param   {Object}   objects  The objects to merge together
+	 * @returns {Object}            Merged values of defaults and options
+	 */
+	var extend = function () {
+
+		// Variables
+		var extended = {};
+		var deep = false;
+		var i = 0;
+
+		// Check if a deep merge
+		if ( Object.prototype.toString.call( arguments[0] ) === '[object Boolean]' ) {
+			deep = arguments[0];
+			i++;
+		}
+
+		// Merge the object into the extended object
+		var merge = function (obj) {
+			for (var prop in obj) {
+				if (obj.hasOwnProperty(prop)) {
+					// If property is an object, merge properties
+					if (deep && Object.prototype.toString.call(obj[prop]) === '[object Object]') {
+						extended[prop] = extend(extended[prop], obj[prop]);
+					} else {
+						extended[prop] = obj[prop];
+					}
+				}
+			}
+		};
+
+		// Loop through each object and conduct a merge
+		for (; i < arguments.length; i++) {
+			var obj = arguments[i];
+			merge(obj);
+		}
+
+		return extended;
+
+	};
+
+	/**
+	 * A private method
+	 */
+	var cacheDom = function () {
+
+		// Cache the whole document
+		doc = $(document);
+
+		// Cache the publication wrapper div
+		pubContainer = doc.find('.' + options.publicationListContainerClassName);
+
+		// Cache the list of items
+		pubList = pubContainer.find("ul");
+
+		//
+		pubItems = pubList.children();
+
+
+
+	};
+
+	/**
+	 * A private method
+	 */
+	var bindEvents = function () {
+
+		/*
+		// If the open button is clicked show the menu
+		menuOpenButton.on('click', show.bind(this));
+
+		// If the close button is clicked hide the menu
+		menuCloseButton.on('click', hide.bind(this));
+
+		// If the first focusable item is tabed on
+		menuContainerFirstFocusable.on('keydown', tabKeyMenuFirstChildHandler.bind(this));
+
+		// If the last focusable item is tabed on
+		menuContainerLastFocusable.on('keydown', tabKeyMenuLastChildHandler.bind(this));
+		*/
+
+	};
+
+	/**
+	 * A private method
+	 */
+	var buildSearchUI = function () {
+
+	}
+
+
+	/**
+	 * A private method
+	 */
+	var validateContentEntry = function () {
+
+		// Check if the wrapper class name was set by the user
+		if (options.publicationListContainerClassName === "" ) {
+			throw("List Wrapper Class has not been set by the user.");
+		}
+
+		// Check if the wrapper class exists in the document
+		if (!$('.' + options.publicationListContainerClassName).length) {
+			throw("No List Wrapper Class was found.")
+		}
+	}
+
+	/**
+	 * A public method
+	 */
+	publicAPIs.doSomething = function () {
+		//somePrivateMethod();
+		// Code goes here...
+	};
+
+	/**
+	 * Another public method
+	 */
+	publicAPIs.init = function (settings) {
+
+		// Merge options into defaults
+		options = extend(defaults, settings || {});
+
+		try {
+
+			// Check Entry Point
+			validateContentEntry();
+
+			// Cache the dom and other elements
+			cacheDom();
+
+			// Add Search UI
+			//buildSearchUI();
+
+			// Bind the event handlers
+			//bindEvents();
+
+		}
+		catch(e) {
+			// Send the error message to the console window
+			console.log("Publication Search Plugin: " + e);
+		}
+		finally {
+			//code that will run after a try/catch block regardless of the outcome
+		}
+	};
+
+
+	//
+	// Return the Public APIs
+	//
+	return publicAPIs;
+
+})();
+
+
+
+
+
+
 /*!
  * Revealing Module Pattern with User Options Boilerplate
  * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com

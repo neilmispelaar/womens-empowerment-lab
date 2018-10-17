@@ -11,4 +11,8 @@ jQuery(document).ready(function ($) {
 		menuContainerClassName: "wl-menu-container"
 	});
 
+	myPublicationsSearch.init({
+		publicationListContainerClassName: "wl-publication-list-class-container"
+	});
+
 });

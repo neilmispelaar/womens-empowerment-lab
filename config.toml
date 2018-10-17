@@ -1,18 +1,20 @@
-# DEVELOPMENT
-baseURL = "https://womensempowerment-lab-dev.netlify.com/"
+# DEVELOPMENT ADDRESS
+#baseURL = "https://womensempowerment-lab-dev.netlify.com/"
 
-# PRODUCTION
-#baseURL = "https://womensempowerment.lab.mcgill.ca/"
+# PRODUCTION ADDRESS
+baseURL = "https://womensempowerment.lab.mcgill.ca/"
 
 # DISABLE HUGO FROM GENERATING THE FOLLOWING
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm", "sitemap"]
 
 # LANGUAGE CODE
 languageCode = "en-ca"
-title = "Women's Empowerment in Development Lab at ISID"
 
 # BUILD THEME
 theme = "hugo-wed-lab-v2"
+
+# SITE SETTINGS
+title = "Women's Empowerment in Development Lab at ISID"
 
 # USER DEFINED SITE PARAMETERS
 [params]
