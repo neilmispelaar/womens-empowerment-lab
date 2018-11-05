@@ -37,19 +37,23 @@ var myPublicationsSearch = (function () {
 	var pubContainer = null;
 	var pubList = null;
 	var pubItems = null;
-
+	var itemCount = null;
 
 	// Public APIs Object
 	var publicAPIs = {};
-
 
 	// Define option defaults
 	var defaults = {
 		publicationListContainerClassName: ""
 	};
-
 	var options;
 
+	var pubFilterList = [];
+	var filterClass = "wl-fltr";
+	var filterShowClass = "show";
+	var filterIDPrefix = "f-"
+	var warningMessage = "Publication List Filter Warning: ";
+	var errorMessage = "Publication List Filter Error: ";
 
 	//
 	// Methods
@@ -113,9 +117,49 @@ var myPublicationsSearch = (function () {
 		// Cache the list of items
 		pubList = pubContainer.find("ul");
 
-		//
+		// Also cache the list of items
 		pubItems = pubList.children();
 
+	};
+
+
+	/**
+	 * A private method
+	 */
+	var buildFilterList = function () {
+
+		itemCount = pubList.children().length;
+
+		var itemsWithNoFilterType = 0;
+
+		// Walk through the List and Build the Filter UI
+		for (var i = 0; i < itemCount; i++) {
+
+			// Check if the item has an element with class name for the filter
+			if (pubItems.eq(i).find("." + options.filter[0]).length) {
+
+				// Check if the text for the element is already in the filter array
+				if ( pubFilterList.indexOf(pubItems.eq(i).find("." + options.filter[0]).text() == -1)) {
+					// Found
+					pubFilterList.push( pubItems.eq(i).find("." + options.filter[0]).text() );
+				}
+
+			}
+			else {
+				itemsWithNoFilterType++;
+			}
+
+		}
+
+		// Console Log Warning for the Empty Filter Count
+		if ( itemsWithNoFilterType ) {
+			console.log(warningMessage + itemsWithNoFilterType + " - items found that do not specify a filter value");
+		}
+
+		// If filters were found then we build the Filter UI
+		if ( !Array.isArray(pubFilterList) || !pubFilterList.length) {
+			throw("No elements were found with any filters set");
+		}
 
 
 	};
@@ -123,7 +167,76 @@ var myPublicationsSearch = (function () {
 	/**
 	 * A private method
 	 */
+	var buildFilterButtonHTML = function (btnID, btnText) {
+
+		var htmlString = "<label " +
+							"class='btn btn-secondary' > " +
+							"<input " +
+							"type='radio' " +
+							"name='filter' " +
+							"id='" + btnID + "' " +
+							"autocomplete='off' >" +
+							btnText +
+							"</label>";
+		return (htmlString);
+	};
+
+
+	/**
+	 * A private method
+	 */
+	var buildSearchUI = function () {
+
+		var searchUI = ""
+
+		// Start with the wrapper div
+		searchUI = "<div class='btn-group btn-group-toggle' data-toggle='buttons'>";
+
+		// Add the Show All Options
+		searchUI += buildFilterButtonHTML(filterIDPrefix + "all", "Show All" );
+
+		// Loop through all of the filter options, adding a button for each
+		for (var i = 0; i < pubFilterList.length; i++) {
+			searchUI += buildFilterButtonHTML(filterIDPrefix + i.toString() , pubFilterList[i] );
+		}
+		// Close the wrapper div
+		searchUI += "</div>"
+
+		pubContainer.prepend( searchUI );
+
+
+
+		/*
+			// Build an array of different types dynamically
+			console.log(pubFilterList);
+
+			// Walk through the List and Build the Filter UI
+
+			pubList.children().find("." + options.filter[0]).css( "background-color", "red" );
+
+			//pubList.children().css( "background-color", "red" );
+
+			//console.log (pubList.children().find("." + options.filter[0]).text());
+
+			pubList.children().filter("." + options.filter[0]).css( "background-color", "red" );
+
+			//console.log (pubList.children().length);
+
+			//console.log(pubItems.jquery);
+			//pubFilterList
+
+			//console.log(pubItems.children().text());
+		*/
+
+	};
+
+	/**
+	 * A private method
+	 */
 	var bindEvents = function () {
+
+		// Bind each filter button to the filter function
+		pubContainer.find("[id^=" + filterIDPrefix + "]").on('change', filter.bind(this));
 
 		/*
 		// If the open button is clicked show the menu
@@ -144,10 +257,65 @@ var myPublicationsSearch = (function () {
 	/**
 	 * A private method
 	 */
-	var buildSearchUI = function () {
+	var filter = function (e) {
 
+		// Show all handler
+		if ( e.target.id === (filterIDPrefix + "all" ))
+		{
+			// Add the Filter Show Class to all of the children
+			pubItems.addClass( filterShowClass );
+		}
+		else {
+
+			// Another filter button was clicked (not the show all button)
+
+			// Find out which button was clicked and grab the array index
+			var filterArrayIndex = parseInt(e.target.id.substring(filterIDPrefix.length), 10);
+
+			// Walk through the List and ...
+			for (var i = 0; i < itemCount; i++) {
+
+				// Check if the item has an element with class name for the filter
+				if (pubItems.eq(i).find("." + options.filter[0]).length) {
+
+					console.log("Comparing two items: " +
+						pubItems.eq(i).find("." +
+						options.filter[0]).text() + " | with this | " +
+						pubFilterList[filterArrayIndex]);
+
+
+					// Check if the text for the element matches the current selected item
+					if ( pubItems.eq(i).find("." + options.filter[0]).text() === pubFilterList[filterArrayIndex] ) {
+
+						// Match found so add the Filter Show Class
+						pubItems.eq(i).addClass(filterShowClass);
+					}
+					else {
+						// No match found so remove the Filter Show Class
+						pubItems.eq(i).removeClass(filterShowClass);
+					}
+
+				}
+				else {
+					// No type has been specified so hide the element anyway
+
+					// Remove the Filter Show Class
+					pubItems.eq(i).removeClass(filterShowClass);
+				}
+			}
+		}
 	}
 
+
+	/**
+	 * Walk through all of the items and add a class
+	 * to help with annimations
+	 */
+	var setInitialState = function () {
+
+		pubList.children().addClass(filterClass);
+		pubList.children().addClass(filterShowClass);
+	}
 
 	/**
 	 * A private method
@@ -189,16 +357,25 @@ var myPublicationsSearch = (function () {
 			// Cache the dom and other elements
 			cacheDom();
 
+			// Build the filter list
+			buildFilterList();
+
 			// Add Search UI
-			//buildSearchUI();
+			buildSearchUI();
+
+			// Add default item class
+			setInitialState();
 
 			// Bind the event handlers
-			//bindEvents();
+			bindEvents();
+
+			// Hit the show all button
+
 
 		}
 		catch(e) {
 			// Send the error message to the console window
-			console.log("Publication Search Plugin: " + e);
+			console.log(errorMessage + e);
 		}
 		finally {
 			//code that will run after a try/catch block regardless of the outcome
