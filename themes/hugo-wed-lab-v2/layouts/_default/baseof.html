@@ -26,17 +26,28 @@
 
 		{{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
 
-		<main role="main" property="mainContentOfPage">
-			{{/*
+		{{ block "breadcrumbs" . }}{{ partial "site/breadcrumbs.html" . }}{{ end }}
+
+		<main role="main" property="mainContentOfPage" class="container">
+
 			{{if not .IsHome}}
-			<div class="container-fluid wl-heading-container">
-				<div class="container">
-				<h1 class="display-1" id="cont">{{ .CurrentSection.Title }}</h1>
+
+				<div class="row justify-content-center">
+
+					<div class="col-10">
+
+							{{ block "main" . }}{{ end }}
+
+					</div>
+
 				</div>
-			</div>
+
+			{{ else }}
+
+				{{ block "main" . }}{{ end }}
+
 			{{end}}
-			*/}}
-			{{ block "main" . }}{{ end }}
+
 		</main>
 
 		{{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}

@@ -1,19 +1,13 @@
 {{ define "main" }}
 
-	{{ partial "site/breadcrumbs.html" . }}
+	<h1 id="cont" property="name" class="mb-4">{{ .Title }}</h1>
 
-	<div class="container">
+	<p class="page-lead">{{ .Page.Params.Person.Title  }}</p>
 
-		<h1 id="cont" property="name" class="mb-4">{{ .Title }}</h1>
+	{{ .Content }}
 
-		<p class="page-lead">{{ .Page.Params.Person.Title  }}</p>
-
-		{{ .Content }}
-
-		{{ if isset .Page.Params.Person "readmore" }}
-			<p><a rel="external" href="{{ .Page.Params.Person.ReadMore }}">Read more <span class="sr-only">about {{ .Title }}</span></a></p>
-		{{ end }}
-
-	</div>
+	{{ if isset .Page.Params.Person "readmore" }}
+		<p><a rel="external" href="{{ .Page.Params.Person.ReadMore }}">Read more <span class="sr-only">about {{ .Title }}</span></a></p>
+	{{ end }}
 
 {{ end }}
