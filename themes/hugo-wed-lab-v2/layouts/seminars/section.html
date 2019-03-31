@@ -3,16 +3,17 @@
 
 	<h1 id="cont" property="name" class="mb-4">{{ .Title }}</h1>
 
-	<p class="page-lead">TO DO</p>
+	<p class="page-lead">The WED Lab, in partnership with Canada's International Development Research Centre, is hosting a series of seven research-to-practice training seminars for students, scholars, practitioners and policymakers on state of the art research in core areas of women’s empowerment in development. </p>
+
+	<h2 class="h3">Upcoming Seminars:</h2>
 
 	<ul>
 		<!-- Ranges through content/posts/*.md -->
 		{{ range .Pages }}
 			<li>
-				<a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+				<a href="{{.Permalink}}">{{.Title}}</a>
 			</li>
 		{{ end }}
 	</ul>
-
 
 {{ end }}
