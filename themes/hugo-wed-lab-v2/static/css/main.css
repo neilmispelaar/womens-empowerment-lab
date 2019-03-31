@@ -471,6 +471,13 @@ ol.breadcrumb {
 	color: #ffffff !important;
 }
 
+.breadcrumb .breadcrumb-item a {
+	text-decoration: underline;
+}
+
+.breadcrumb .breadcrumb-item a:hover {
+	color: #eee !important;
+}
 
 .breadcrumb .breadcrumb-item a,
 .breadcrumb .breadcrumb-item.active{
