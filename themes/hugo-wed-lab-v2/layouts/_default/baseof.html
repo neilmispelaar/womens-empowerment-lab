@@ -30,6 +30,10 @@
 
 		<main role="main" property="mainContentOfPage" class="container">
 
+			{{/*
+				Reduce the container width on pages that aren't the home pages
+				The home page gets the full width
+			*/}}
 			{{if not .IsHome}}
 
 				<div class="row justify-content-center">
