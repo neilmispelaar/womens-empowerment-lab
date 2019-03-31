@@ -4,10 +4,31 @@
 
 	<div class="container">
 
-
 	<h1>Publications</h1>
 
 		<p class="page-lead">Selected publication produced by WED Lab members are listed on this page. Publications include journal articles, books and book chapters, media coverage, and policy briefs.</p>
+
+		<div class="wl-publication-list-class-container">
+			<ul>
+				<li>
+					<div class="type">This is a new type</div>
+					<div class="else">Goodbye</div>
+				</li>
+				<li>Two</li>
+				<li>
+					<div class="type">Three</div>
+					<div class="else">Four</div>
+				</li>
+				<li>Five</li>
+				<li>
+					<div class="type">Another new type</div>
+					<div class="else">Seven</div>
+				</li>
+				<li><span class="type">Eight</span></li>
+			</ul>
+		</div>
+
+
 
 		{{ $journals := (where $.Site.Data.publications.entries "type" "==" "Journals") }}
 		{{ $journalsCount := len $journals }}

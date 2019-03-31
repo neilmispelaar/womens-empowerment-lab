@@ -12,7 +12,8 @@ jQuery(document).ready(function ($) {
 	});
 
 	myPublicationsSearch.init({
-		publicationListContainerClassName: "wl-publication-list-class-container"
+		publicationListContainerClassName: "wl-publication-list-class-container",
+		filter: [ "type" ]
 	});
 
 });
