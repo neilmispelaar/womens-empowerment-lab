@@ -454,10 +454,6 @@ ul.wl-footer-nav li a {
    Breadcrumb styles
    ========================================================================== */
 
-.breadcrumb-border-top {
-	/*border-top: 30px solid #23BDC5;*/
-}
-
 ol.breadcrumb {
 	color: #ffffff !important;
 	background-color: inherit;
@@ -503,13 +499,13 @@ main {
 }
 .display-2, h1, .h1 {
 	margin-top: 4rem;
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 	font-size: 3.0rem !important;
 	font-weight: 300 !important;
 }
 .display-3, h2, .h2 {
-	margin-top: 4rem;
-	margin-bottom: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
 	font-size: 2.5rem !important;
 	font-weight: 300 !important;
 }
@@ -534,15 +530,15 @@ h1 {
 		font-weight: 300 !important;
 	}
 	.display-2, h1, .h1 {
-		font-size: 3.3rem !important;
+		font-size: 2.6rem !important;
 		font-weight: 300 !important;
 	}
 	.display-3, h2, .h2 {
-		font-size: 2.9rem !important;
+		font-size: 2.2rem !important;
 		font-weight: 300 !important;
 	}
 	.display-4, h3, .h3  {
-		font-size: 2.7rem !important;
+		font-size: 2.0rem !important;
 		font-weight: 300 !important;
 	}
 
