@@ -28,24 +28,24 @@
 
 		{{ block "breadcrumbs" . }}{{ partial "site/breadcrumbs.html" . }}{{ end }}
 
-		<main role="main" property="mainContentOfPage" class="container">
+		<main role="main" property="mainContentOfPage">
 
 			{{/*
 				Reduce the container width on pages that aren't the home pages
 				The home page gets the full width
 			*/}}
 			{{if not .IsHome}}
+				<div class="container">
+					<div class="row justify-content-center">
 
-				<div class="row justify-content-center">
+						<div class="col-10">
 
-					<div class="col-10">
+								{{ block "main" . }}{{ end }}
 
-							{{ block "main" . }}{{ end }}
+						</div>
 
 					</div>
-
 				</div>
-
 			{{ else }}
 
 				{{ block "main" . }}{{ end }}
