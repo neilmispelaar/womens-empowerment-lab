@@ -242,6 +242,7 @@ a:hover {
 
 .wl-menu {
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-between;
 	padding: 35px 0px 35px 0px;
