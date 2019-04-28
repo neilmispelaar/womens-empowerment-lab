@@ -5,15 +5,44 @@
 
 	<p class="page-lead">The WED Lab, in partnership with Canada's International Development Research Centre, is hosting a series of seven research-to-practice training seminars for students, scholars, practitioners and policymakers on state of the art research in core areas of women’s empowerment in development. </p>
 
-	<h2 class="h3">Upcoming Seminars:</h2>
+	{{ $future := (where .Pages "Params.seminar.passed" "==" false) }}
+	{{ $futureCount := len $future }}
 
-	<ul>
-		<!-- Ranges through content/posts/*.md -->
-		{{ range .Pages }}
+	{{ if gt $futureCount 0 }}
+	<section>
+		<h2 class="h3">Upcoming Seminars:</h2>
+
+		<ul>
+		{{ range sort (where .Pages "Params.seminar.passed" "==" false) "Params.seminar.date" }}
+
 			<li>
 				<a href="{{ .Permalink | relLangURL }}">{{.Title}}</a>
 			</li>
+
 		{{ end }}
-	</ul>
+		</ul>
+	</section>
+	{{ end }}
+
+	{{ $passed := (where .Pages "Params.seminar.passed" "==" true) }}
+	{{ $passedCount := len $passed }}
+
+	{{ if gt $passedCount 0 }}
+	<section>
+		<h2 class="h3">Past Seminars:</h2>
+
+		<ul>
+		{{ range sort (where .Pages "Params.seminar.passed" "==" true) "Params.seminar.date" }}
+
+			<li>
+				<a href="{{ .Permalink | relLangURL }}">{{.Title}}</a>
+			</li>
+
+		{{ end }}
+		</ul>
+	</section>
+	{{ end }}
+
+
 
 {{ end }}
