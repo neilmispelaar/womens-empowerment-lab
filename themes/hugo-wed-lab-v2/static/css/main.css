@@ -196,6 +196,14 @@ a:hover {
 }
 
 
+.people-card-container .people-type {
+	order: 0;
+	font-weight: 500 !important;
+	font-size: 1.0rem !important;
+	color: #828484;
+}
+
+
 .people-card-container .people-author {
 	order: 2;
 	font-weight: 500 !important;
