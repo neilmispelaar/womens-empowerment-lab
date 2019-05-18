@@ -379,6 +379,10 @@ a:hover {
 	margin-top: 100px;
 }
 
+.home .wl-footer-row-1-container {
+	margin-top: 0px;
+}
+
 .wl-footer-row-1-container a {
 	color: #ffffff;
 }
