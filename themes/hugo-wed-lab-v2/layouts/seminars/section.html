@@ -8,21 +8,31 @@
 	{{ $future := (where .Pages "Params.seminar.passed" "==" false) }}
 	{{ $futureCount := len $future }}
 
-	{{ if gt $futureCount 0 }}
+
 	<section>
 		<h2 class="h3">Upcoming Seminars:</h2>
 
-		<ul>
-		{{ range sort (where .Pages "Params.seminar.passed" "==" false) "Params.seminar.date" }}
+		{{ if eq $futureCount 0 }}
+		<p>Stay tuned for information about our upcoming seminars.</p>
+		{{ end }}
 
-			<li>
-				<a href="{{ .Permalink | relLangURL }}">{{.Title}}</a>
-			</li>
+		{{ if gt $futureCount 0 }}
+		<ul>
+			{{ range sort (where .Pages "Params.seminar.passed" "==" false) "Params.seminar.date" }}
+
+				<li>
+					<a href="{{ .Permalink | relLangURL }}">{{.Title}}</a>
+				</li>
+
+			{{ end }}
+
+		</ul>
 
 		{{ end }}
-		</ul>
+
+
 	</section>
-	{{ end }}
+
 
 	{{ $passed := (where .Pages "Params.seminar.passed" "==" true) }}
 	{{ $passedCount := len $passed }}
