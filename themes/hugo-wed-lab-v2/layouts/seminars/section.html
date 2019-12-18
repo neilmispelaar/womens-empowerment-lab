@@ -44,7 +44,7 @@
 
 	{{ if gt $passedCount 0 }}
 	<section>
-		<h2 class="h3">2019 Seminars:</h2>
+		<h2 class="h3 pb-3">2019 Seminars:</h2>
 
 		<ul>
 		{{ range sort (where .Pages "Params.seminar.passed" "==" true) "Params.seminar.date" }}
